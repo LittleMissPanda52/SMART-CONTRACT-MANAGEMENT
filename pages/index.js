@@ -83,7 +83,7 @@ export default function HomePage() {
 
     // Check to see if user is connected. If not, connect to their account
     if (!account) {
-      return <button onClick={connectAccount}>Please connect your Metamask wallet</button>
+      return <button onClick={connectAccount}>Connect your Metamask wallet</button>
     }
 
     if (balance == undefined) {
@@ -104,7 +104,7 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header><h1>Welcome to the Metacrafters ATM!</h1></header>
+      <header><h1>Welcome to your local Metacrafters' ATM!</h1></header>
       {initUser()}
       <style jsx>{`
         .container {
