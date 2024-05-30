@@ -8,6 +8,7 @@ export default function HomePage() {
   const [atm, setATM] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
 
+
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const atmABI = atm_abi.abi;
 
@@ -83,7 +84,7 @@ export default function HomePage() {
 
     // Check to see if user is connected. If not, connect to their account
     if (!account) {
-      return <button onClick={connectAccount}>Connect your Metamask wallet</button>
+      return <button onClick={connectAccount}> Connect Metamask wallet</button>
     }
 
     if (balance == undefined) {
@@ -92,10 +93,10 @@ export default function HomePage() {
 
     return (
       <div>
-        <p>Your Account: {account}</p>
-        <p>Your Balance: {balance}</p>
-        <button onClick={deposit}>Deposit 1 ETH</button>
-        <button onClick={withdraw}>Withdraw 1 ETH</button>
+        <p> Account ID: {account}</p>
+        <p>This is your Account Balance: {balance}</p>
+        <button onClick={deposit}>Deposit 500 ETH</button>
+        <button onClick={withdraw}>Withdraw 200 ETH</button>
       </div>
     )
   }
@@ -104,7 +105,7 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header><h1>Welcome to your local Metacrafters' ATM!</h1></header>
+      <header><h1> Automated Teller Machine!</h1></header>
       {initUser()}
       <style jsx>{`
         .container {
